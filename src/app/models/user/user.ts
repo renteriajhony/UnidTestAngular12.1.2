@@ -27,8 +27,10 @@ export class User {
 
   ) { }
 
+  get userNameAndEmail() {
+    return `${this.username} / ${this.email}`;
+  }
   get nameAndEmail() {
     return `${this.name} ${this.email}`;
   }
-
 }

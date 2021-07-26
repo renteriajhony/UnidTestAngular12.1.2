@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ReqUser } from 'src/app/model/user/user/ReqResResponseUser';
-import { User } from 'src/app/model/user/user';
+import { ReqUser } from 'src/app/models/user/user/ReqResResponseUser';
+import { User } from 'src/app/models/user/user';
 
 @Injectable({
   providedIn: 'root'
@@ -27,14 +27,10 @@ export class UserService {
   }
 
   public getUsersTest(): void {
-    let dato = this.getUsersFromApi().subscribe(
+    this.getUsersFromApi().subscribe(
       (users) => (this.users = users),
       (error) => (this.users = [])
     );
-
-    this.getUsersFromApi().toPromise().then( response =>{
-      console.log(response);
-    });
   }
 
   private getUsersFromApi(): Observable<any> {

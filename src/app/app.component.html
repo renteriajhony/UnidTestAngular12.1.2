@@ -9,31 +9,7 @@
 <div class="content" role="main">
   <span>Hola mundo</span>
   <div class="row">
-    <div class="col-12">
-      <div class="card">
-        <div class="card-header">
-          <h5><label>Operaciones matemáticas</label></h5>
-        </div>
-        <div class="card-body">
-          <h5 class="card-tittle "></h5>
-          <div>
-            <form>
-              <div class="form-group">
-                <input class="form-control" type="number" #number_a id="number_a" placeholder="Numero 1">
-                <input class="form-control" type="number" #number_b id="number_b" placeholder="Numero 2"><br>
-              </div>
-              <div class="form-group">
-                <input class="form-submit btn btn-primary" type="button" id="btn_s" value="Suma" (click)="mostrarResultado('s')" >
-                <input class="form-submit btn btn-success" type="button" id="btn_r" value="Resta" (click)="mostrarResultado('r')" >
-                <input class="form-submit btn btn-dark" type="button" id="btn_m" value="Multiplica" (click)="mostrarResultado('m')" >
-                <input class="form-submit btn btn-danger" type="button" id="btn_d" value="Divide" (click)="mostrarResultado('d')" >
-              </div>
-              <input class="form-control" type="number" #result id="result" placeholder="Resultado"><br>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-operaciones-matematicas></app-operaciones-matematicas>
   </div>
   <div>
     <app-user></app-user>
